@@ -1,0 +1,142 @@
+html, body{
+	height: 100%;
+}
+body{
+	min-width: 300px;
+	position: relative;
+    font-family: $default-font;
+    color: $color-text;
+    background-color: $color-bg;
+    line-height: 1;
+}
+html{
+    overflow-x: hidden;
+}
+// FORMS
+textarea{
+	resize: none;
+}
+input,
+textarea,
+select {
+	display: block;
+	width: 100%;
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1rem;
+	margin: 0;
+	font-family: $default-font;
+	outline: none;
+	vertical-align: top;
+	transition: $default-transition;
+}
+// States
+input,
+textarea,
+select {
+    &:focus {
+    	outline: 0;
+    }
+    &:disabled,
+    &.disabled {
+    	resize: none;
+    	cursor: default;
+    	font-style: italic;
+	}
+}
+input[type="file"] {
+    width: auto;
+    border: none;
+    padding: 0;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    display: inline-block;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+a {
+    color: $color-text;
+    text-decoration: none;
+    transition: $default-transition;
+    position: relative;
+    &:hover, &:focus, &:active{
+        text-decoration: none;
+        outline: none;
+        color: #cd3333;
+    }
+    // Custom cool animation for links
+    &.underline{
+        &:after{
+            content: '';
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            display: block;
+            width: 0;
+            height: 1px;
+            transition: all .3s ease-out;
+            background-color: #fff;
+        }
+        &:hover:after{
+            width: 100%;
+        }
+    }
+}
+
+h1, h2, h3 {
+    font-family: $pn-bold;
+}
+
+h1 {
+    font-size: 36px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+h3 {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.btns {
+    text-align: center;
+}
+
+.btn {
+    max-width: 315px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    text-transform: uppercase;
+    font-family: $pn-bold;
+    font-size: 18px;
+    color: #fff;
+    background-color: #cd3333;
+    border-radius: 7px;
+    box-sizing: border-box;
+    border: 2px solid #cd3333;
+    transition: $default-transition;
+    &:hover, &:focus, &:active{
+        background-color: #fff;
+        color: #cd3333;
+    }
+}

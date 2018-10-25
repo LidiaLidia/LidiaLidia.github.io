@@ -1,0 +1,122 @@
+@import "_mixins/mixins";
+
+
+@include r(576){
+	.slider-arrow-block{
+		&-prev{
+			left: 15px;
+			&:hover, &:focus, &:active{
+				.slider-arrow{
+					transform: translateX(-10px);
+				}
+			}
+		}
+		&-next{
+			right: 15px;
+			&:hover, &:focus, &:active{
+				.slider-arrow{
+					transform: translateX(10px);
+				}
+			}
+		}
+	}
+}
+@include r(992){
+	.header{
+		&__items{
+			display: block;
+		}
+		&__mobile{
+			display: none;
+		}
+	}
+	.head-block{
+		&__desc{
+			padding: 41px 0 0 39px;
+			text-align: left;
+		}
+		&__info{
+			padding-left: 40px;
+			text-align: left;
+		}
+		&__item{
+			margin-bottom: 0;
+		}
+	}
+	.near-places{
+		&__tablinks{
+			margin-bottom: 30px;
+		}
+		&__nav{
+			&--item{
+				margin-bottom: 0;
+			}
+		}
+		&__item{
+			margin-bottom: 0;
+		}
+	}
+}
+@include r(1200){
+	.footer{
+		&__inner{
+			padding: 28px 0;
+		}
+	}
+	.near-places{
+		&__inner{
+			padding: 36px 0 40px;
+		}
+	}
+	.city-guide{
+		&__inner{
+			padding: 38px 0 42px;
+		}
+	}
+	.city-guide{
+		&__images{
+			position: relative;
+			height: 341px;
+			margin-bottom: 0;
+		}
+		&__img{
+			position: absolute;
+			&-1{
+				left: 185px;
+				top: 0;
+				z-index: 2;
+			}
+			&-2{
+				right: 85px;
+				bottom: -53px;
+				z-index: 1;
+			}
+			&-3{
+				top: -105px;
+				right: -15px;
+				z-index: 0;
+			}
+		}
+		&__btns{
+			width: 50%;
+		}
+		&__btn{
+			justify-content: flex-end;
+		}
+	}
+	.tours{
+		&__inner{
+			padding: 37px 0 40px;
+		}
+	}
+	.head-block{
+		&__inner{
+			padding: 151px 0 22px;
+		}
+	}
+	.header{
+		&__inner{
+			padding: 33px 0 21px;
+		}
+	}
+}

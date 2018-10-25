@@ -1,0 +1,13 @@
+@import "_mixins/font-face";
+
+
+@include font-face("CormorantGaramond-MediumItalic", "../fonts/Cormorant_Garamond/CormorantGaramond-MediumItalic");
+@include font-face("CormorantGaramond-Medium", "../fonts/Cormorant_Garamond/CormorantGaramond-Medium");
+@include font-face("CormorantGaramond-SemiBoldItalic", "../fonts/Cormorant_Garamond/CormorantGaramond-SemiBoldItalic");
+@include font-face("CormorantGaramond-SemiBold", "../fonts/Cormorant_Garamond/CormorantGaramond-SemiBold");
+@include font-face("CormorantGaramond-BoldItalic", "../fonts/Cormorant_Garamond/CormorantGaramond-BoldItalic");
+@include font-face("CormorantGaramond-Bold", "../fonts/Cormorant_Garamond/CormorantGaramond-Bold");
+@include font-face("ProzaLibre-Regular", "../fonts/Proza_Libre/ProzaLibre-Regular");
+@include font-face("ProzaLibre-MediumItalic", "../fonts/Proza_Libre/ProzaLibre-MediumItalic");
+
+

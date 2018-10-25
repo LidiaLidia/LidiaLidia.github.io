@@ -1,0 +1,159 @@
+html, body{
+	height: 100%;
+}
+body{
+	min-width: 300px;
+	position: relative;
+    font-size: 16px;
+    font-family: $default-font;
+    color: #333230;
+    background-color: $color-bg;
+}
+html{
+    overflow-x: hidden;
+}
+h1, h2{
+    font-family: $cg-bold;
+    text-align: center;
+    color: #26292c;
+    font-size: 40px;
+    line-height: 50px;
+}
+h3{
+    font-family: $cg-semibolditalic;
+    font-size: 36px;
+    line-height: 34px;
+    color: #2a2928;
+}
+.tag{
+    font-family: $cg-bolditalic;
+    line-height: 16px;
+    color: #2a2928;
+}
+p{
+    line-height: 26px;
+}
+// FORMS
+textarea{
+	resize: none;
+}
+input,
+textarea,
+select {
+	display: block;
+	width: 100%;
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1rem;
+	margin: 0;
+	font-family: $default-font;
+	outline: none;
+	vertical-align: top;
+	transition: $default-transition;
+}
+// States
+input,
+textarea,
+select {
+    &:focus {
+    	outline: 0;
+    }
+    &:disabled,
+    &.disabled {
+    	resize: none;
+    	cursor: default;
+    	font-style: italic;
+    }
+}
+input[type="file"] {
+    width: auto;
+    border: none;
+    padding: 0;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    display: inline-block;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    transition: $default-transition;
+    position: relative;
+    &:hover, &:focus, &:active{
+        text-decoration: underline;
+        outline: none;
+    }
+    // Custom cool animation for links
+    &.underline{
+        &:after{
+            content: '';
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+            display: block;
+            width: 0;
+            height: 3px;
+            transition: all .3s ease-out;
+        }
+        &:hover:after{
+            width: 100%;
+        }
+    }
+}
+.coment, .share{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.coment{
+    margin-right: 12px;
+    border: 2px solid #d1cfcd;
+    transition: $default-transition;
+    &:hover, &:focus, &:active{
+        background: #2a2928;
+        border-color: #2a2928;
+    }
+}
+.share{
+    background: #2a2928;
+    transition: $default-transition;
+    &:hover, &:focus, &:active{
+        background: rgba(42, 41, 40, .7);
+    }
+}
+.underline{
+    display: inline-block;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #26292c;
+        bottom: 3px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+.italic{
+    font-family: $cg-bolditalic;
+}
+.yellow{
+    color: #fffc8f;
+    &.underline{
+        &:after{
+            background: #fffc8f;
+        }
+    }
+}

@@ -1,0 +1,262 @@
+@import "_mixins/mixins";
+
+
+
+
+
+
+@include r(576){
+	.subscribe{
+		&__input{
+			margin-bottom: 0;
+			padding: 0 140px 0 27px;
+		}
+		&__submit{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 4px;
+		}
+	}
+	.slider{
+		padding: 0 50px;
+		&-slide{
+			padding: 0 25px;
+		}
+		&__nav{
+			display: block;
+		}
+	}
+}
+
+@include r(768){
+	.slider{
+		padding: 0 110px;
+		&__nav{
+			width: 108px;
+			&__tag{
+				line-height: 108px;
+			}
+			&__title{
+				line-height: 108px;
+			}
+		}
+		&__header--link{
+			margin-top: 0;
+			position: absolute;
+		}
+	}
+	.main-article__player--slide{
+		padding: 0 115px 0 81px;
+	}
+	.main-article__player--slide__img, .main-article__player--slide__song{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.main-article__player--slide__song{
+		width: calc(100% - 134px);
+	}
+	.main-article__player--slider .player-slider-arrow-prev{
+		bottom: 32px;
+	}
+}
+
+@include r(992){
+	h1,h2{
+		font-size: 90px;
+		line-height: 81px;
+	}
+	.head-block--slider__number{
+		display: block;
+	}
+	.footer{
+		&__inner{
+			padding: 85px 15px 26px;
+		}
+		&__top-line{
+			padding-bottom: 85px;
+			margin-bottom: 26px;
+			border-bottom: 1px solid #e4dedb;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&__menu{
+				display: block;
+				&--list{
+					&-item{
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 39px;
+						&:last-child{
+							margin-right: 0;
+						}
+					}
+				}
+				&--link{
+					color: #918e8b;
+					transition: $default-transition;
+					&:hover, &:focus, &:active{
+						color: #26272d;
+						text-decoration: none;
+					}
+				}
+			}
+			&__search{
+				display: block;
+			}
+			&__social{
+				display: block;
+				&--list{
+					&-item{
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 24px;
+						&:last-child{
+							margin-right: 0;
+						}
+					}
+				}
+				&--link{
+					color: #918e8b;
+					transition: $default-transition;
+					font-size: 20px;
+					&:hover, &:focus, &:active{
+						color: #26272d;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		&__bottom-line{
+			&--txt{
+				text-align: left;
+			}
+		}
+	}
+	.most-read-article__title{
+		.underline{
+			&:after{
+				bottom: 14px;
+			}
+		}	
+	}
+}
+
+@include r(1200){
+	.hot-topic__grid{
+		column-count: 3;
+		text-align: left;
+		margin: -18px -18px 39px;
+		&-item{
+			margin: 20px;
+		}
+	}
+	.hot-topic__link{
+		margin-right: 23px;
+	}
+	.header__bottom-line__navbar{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: static;
+		transform: translateX(0);
+		opacity: 1;
+		padding: 0;	
+		background-color: transparent;	
+		&-menu{
+			&__item{
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 35px;
+				margin-bottom: 0;	
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+			&__link{
+				color: #26272d;
+				transition: $default-transition;
+				padding-bottom: 5px;
+				border-bottom: 2px solid transparent;
+				font-size: 16px;
+				&:hover, &:focus, &:active{
+					color: #26272d;
+					text-decoration: none;
+					border-bottom: 2px solid #26272d;
+				}
+			}
+		}
+		&-search--icon{
+			img{
+				margin-left: 100px;
+				margin-bottom: 0;	
+			}
+		}
+		&-social{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&--txt{
+				color: #26272d;
+				margin-right: 35px;
+				margin-bottom: 0;	
+			}
+			&__items{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			&__item{
+				margin-right: 25px;
+				margin-bottom: 0;	
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+			&__link{
+				color: #26272d;
+				font-size: 20px;
+				transition: $default-transition;
+				&:hover, &:focus, &:active{
+					color: #918e8b;
+				}
+			}
+		}
+	}
+	.burger-menu{
+		display: none;
+	}
+}
+
+@include r(1324){
+	.main-article__piece__title{
+		width: 150%;
+		left: -47%;
+		text-align: right;
+	}
+}
+
+@include r(1400){
+	.slider{
+		padding: 0;
+		&-slide{
+			padding: 0 130px 50px 20px;
+		}
+		&__header--link{
+			right: -89px;
+		}
+	}
+}
+
+
+@media (max-width: 1200px) and (min-width: 768px){
+	.hot-topic__grid{
+		column-count: 2;
+		margin: -15px -15px 55px;
+		text-align: center;
+		&-item{
+			width: 370px;
+			margin: 15px;
+		}
+	}
+}

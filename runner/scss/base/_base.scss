@@ -1,0 +1,346 @@
+html, body{
+	height: 100%;
+}
+body{
+	min-width: 300px;
+	position: relative;
+    font-size: $font-size;
+    line-height: 1.875em;
+    font-family: $default-font;
+    color: $color-text;
+    background-color: $color-bg;
+}
+html{
+    overflow-x: hidden;
+    &::-webkit-scrollbar-thumb, &::-webkit-scrollbar{
+        width: 7px;
+        background-color: #0f81f8;
+        border-radius: 15px;
+    }
+    &::-webkit-scrollbar-track-piece{
+        background-color: #fff;
+        border-radius: 3px;
+    }
+}
+// FORMS
+textarea{
+	resize: none;
+    height: 122px;
+    &::-webkit-scrollbar-thumb, &::-webkit-scrollbar{
+        width: 4px;
+        background-color: #fff;
+        border-radius: 15px;
+    }
+    &::-webkit-scrollbar-track-piece{
+        background-color: #0f81f8;
+        border-radius: 3px;
+    }
+}
+input,
+textarea,
+select {
+	display: block;
+	width: 100%;
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1rem;
+	margin: 0;
+	font-family: $default-font;
+	outline: none;
+	vertical-align: top;
+	transition: $default-transition;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding: 14px 8px 6px;
+    &::placeholder{
+        color: #fff;
+    }
+}
+// States
+input,
+textarea,
+select {
+    &:focus {
+    	outline: 0;
+    }
+    &:disabled,
+    &.disabled {
+    	resize: none;
+    	cursor: default;
+    	font-style: italic;
+    }
+}
+input[type="file"] {
+    width: auto;
+    border: none;
+    padding: 0;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    display: inline-block;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+a {
+    color: $color-text;
+    text-decoration: none;
+    transition: $default-transition;
+    position: relative;
+    &:hover, &:focus, &:active{
+        text-decoration: none;
+        outline: none;
+    }
+    // Custom cool animation for links
+    &.underline{
+        &:after{
+            content: '';
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+            display: block;
+            width: 0;
+            height: 3px;
+            transition: all .3s ease-out;
+        }
+        &:hover:after{
+            width: 100%;
+        }
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: $g-bold;
+}
+
+h1, h2 {
+    line-height: 60px;
+}
+
+h1{
+    font-size: 55px;
+    color: #0f81f8;
+}
+
+h2{
+    font-size: 40px;
+    &.h2-white{
+        color: #fff;
+    }
+    &.h2-blue{
+        color: #0f81f8;
+    }
+}
+
+h3{
+    font-size: 30px;
+    line-height: 34px; 
+}
+
+h4{
+    font-size: 20px;
+    line-height: 1;
+}
+
+.container{
+    max-width: 1396px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn{
+    display: inline-block;
+    border-radius: 30px;
+    padding: 7px 10px 7px;
+    text-transform: uppercase;
+    line-height: 39px;
+    font-family: $g-medium;
+    min-width: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.btn-default{
+    border: 1px solid #0f81f8;
+    color: #0f81f8;
+    background-color: #fff;
+    background-image: none;
+    &:hover, &:focus, &:active{
+        color: #fff;
+        background-color: #0f81f8;
+    }
+}
+
+.btn-primary{
+    border: 1px solid #0f81f8;
+    color: #fff;
+    background-color: rgba(15, 129, 248, 1);
+    background-image: none;
+    &:hover, &:focus, &:active{
+        color: #fff;
+        background-color: rgba(15, 129, 248, .6);
+    }
+    &.white{
+        border: 1px solid #fff;
+        color: #0f81f8;
+        background-color: rgba(255, 255, 255, 1);
+        background-image: none;
+        &:hover, &:focus, &:active{
+            color: #fff;
+            background-color: rgba(255, 255, 255, .6);
+        }
+    }
+}
+
+.title{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px; 
+    &-block{
+        text-align: center;
+        margin-bottom: 30px;   
+    }
+    &-decorate{
+        position: absolute;
+        width: 100%;
+        height: 7px;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        &-line{
+            display: inline-block;
+            vertical-align: middle;
+            position: absolute;
+            box-sizing: border-box;
+            height: 7px;
+            
+        }
+        &-left{
+            width: calc(72% - 21px);
+            padding-right: 17px;
+            margin-right: 10px;
+            left: 0;
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 7px;
+                background-color: #0f81f8;
+                width: calc(100% - 17px);
+                border-radius: 25px;
+            }
+            &:after{
+                content: '';
+                height: 7px;
+                width: 7px;
+                background-color: #0f81f8;
+                position: absolute;
+                right: 0;
+                border-radius: 50%;
+            }
+            &.white{
+                &:before, &:after{
+                    background-color: #fff;
+                }
+            }
+        }
+        &-right{
+            width: 28%;
+            padding-left: 17px;
+            right: 0;
+            &:after{
+                content: '';
+                position: absolute;
+                right: 0;
+                height: 7px;
+                background-color: #0f81f8;
+                width: calc(100% - 7px);
+                border-radius: 25px;
+            }
+            &:before{
+                content: '';
+                height: 7px;
+                width: 7px;
+                background-color: #0f81f8;
+                position: absolute;
+                left: -10px;
+                border-radius: 50%;
+            }
+            &.white{
+                &:before, &:after{
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.desc{
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.rating{
+    background:transparent url('../img/star.png') repeat-x;
+    width: 157px;
+    height: 24px;
+    position: relative;
+    &-inner{
+        position: absolute;
+        background:transparent url('../img/star-active.png') repeat-x;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+    }
+}
+
+.social{
+    &__link{
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        position: relative;
+        background-image: url(../img/css_sprites.png);
+        transition: none;
+        &-f{
+            width: 21px;
+            background-position: -114px -5px;
+            &:hover{
+                background-position: -83px -5px;
+            }
+        }
+        &-tw{
+            background-position: -5px -95px;
+            &:hover{
+                background-position: -35px -95px;
+            }
+        }
+        &-g{
+            background-position: -113px -35px;
+            &:hover{
+                background-position: -113px -65px;           
+            }
+        }
+        &-dr{
+            background-position: -83px -35px;
+            &:hover{
+                background-position: -83px -65px;
+            }
+        }
+    }
+}

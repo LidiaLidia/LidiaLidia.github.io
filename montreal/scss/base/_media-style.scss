@@ -1,0 +1,197 @@
+@import "_mixins/mixins";
+
+@include r(576){
+	.info-block{
+		&__item{
+			&--inner{
+				align-items: center;
+				flex-direction: row;
+			}
+			&--img{
+				margin-right: 25px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@include r(768){
+	.btns{
+		justify-content: center;
+	}
+	.header{
+		&__main{
+			padding: 185px 0 223px;
+		}
+		&__btns{
+			justify-content: flex-start;
+		}
+	}
+	.services{
+		&__items{
+			margin-bottom: 88px;
+		}
+		&__item{
+			margin-bottom: 0;
+			&--img{
+				margin-bottom: 40px;
+			}
+			&--title{
+				margin-bottom: 43px;
+			}
+		}
+	}
+	.stats{
+		&__item{
+			&--inner{
+				text-align: center;
+			}
+			&--img{
+				margin: 0 auto 47px;
+			}
+		}
+	}
+	.portfolio{
+		&__nav{
+			&--btns{
+				padding-left: 0;
+				justify-content: center;
+			}
+		}
+		&__item{
+			&-2{
+				width: 50%;
+				margin-right: -5px;
+			}
+			&-3{
+				width: 50%;
+			}
+			&-4{
+				width: 50%;
+				margin-right: -6px;
+			}
+			&-5{
+				width: 50%;
+			}
+		}
+	}
+	.contact{
+		&__form{
+			&--input{
+				&-half{
+					width: calc(50% - 14px);
+					margin-right: 23px;
+				}
+			}
+		}
+	}
+}
+
+@include r(992){
+	h1{
+		font-size: 116.04px;
+		line-height: 120px;
+	}
+	.quote{
+		&__inner{
+			text-align: center;
+		}
+	}
+	.portfolio{
+		&__item{
+			&-4{
+				width: 35%;
+			}
+			&-5{
+				width: 30%;
+				margin-right: -6px;
+			}
+			&-6{
+				width: 35.2%;
+			}
+		}
+	}
+	.info-block{
+		&__item{
+			margin-bottom: 0;
+			&--inner{
+				padding-left: 56px;
+			}
+		}
+	}
+}
+
+@include r(1200){
+	h1{
+		font-size: 176.04px;
+		line-height: 180px;
+	}
+	.header{
+		&__inner{
+			padding: 0 6px;
+		}
+	}
+	.quote{
+		&__inner{
+			padding: 89px 95px 93px;
+		}
+	}
+	.services{
+		&__inner{
+			padding: 118px 0;
+		}
+	}
+	.stats{
+		&__inner{
+			padding: 95px 0 58px;
+		}
+	}
+	.portfolio{
+		&__items{
+			&--inner{
+				&-1{
+					width: 500px;
+				}
+				&-2{
+					width: calc(100% - 500px);
+				}
+			}
+		}
+		&__item{
+			&-1{
+				width: 500px;
+				height: 900px;
+			}
+		}
+	}
+	.clients{
+		&__inner{
+			padding: 115px 10px 119px;
+		}
+	}
+	.contact{
+		&__inner{
+			padding: 112px 0 95px;
+		}
+	}
+	.info-block{
+		&__inner{
+			padding: 122px 0 120px;
+		}
+	}
+	.footer{
+		&__inner{
+			padding: 120px 15px 100px;
+		}
+	}
+}
+
+@include r(1400){
+	.portfolio{
+		&__item{
+			&--hover{
+				padding: 77px 75px;
+			}
+		}
+	}
+}

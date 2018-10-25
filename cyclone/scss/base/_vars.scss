@@ -1,0 +1,23 @@
+// Fonts
+$cg-mediumitalic: "CormorantGaramond-MediumItalic", sans-serif;
+$cg-medium: "CormorantGaramond-Medium", sans-serif;
+$cg-semibolditalic: "CormorantGaramond-SemiBoldItalic", sans-serif;
+$cg-semibold: "CormorantGaramond-SemiBold", sans-serif;
+$cg-bolditalic: "CormorantGaramond-BoldItalic", sans-serif;
+$cg-bold: "CormorantGaramond-Bold", sans-serif;
+$pl-regular: "ProzaLibre-Regular", sans-serif;
+$pl-mediumitalic: "ProzaLibre-MediumItalic", sans-serif;
+
+
+$default-font: $pl-regular;
+
+// Sizes
+$font-size: 1rem;
+
+// Colors
+$color-text: #999999;
+$color-bg: #f8f4f3;
+
+
+$default-transition: all .3s ease-out;
+$long-transition: all 1s ease-out;
