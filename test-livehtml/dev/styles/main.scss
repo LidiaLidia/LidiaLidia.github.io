@@ -1,0 +1,32 @@
+// Подключение шрифтов и переменных
+@import 'reset';
+@import 'fonts';
+@import 'vars';
+@import 'sprite';
+
+body {
+	font-family: $base-font;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	padding: 0 15px;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffcc00;
+	text-decoration: none;
+	transition: $default-transition;
+	&:hover {
+		background-color: #ffd904;
+	}
+}
+
+// Подключение компонентов
+@import 'components/header';
